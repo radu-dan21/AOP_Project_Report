@@ -1,0 +1,4 @@
+aspectlib==2.0.0
+mysql-connector-python==8.0.33
+peewee==3.16.2
+pre-commit==3.3.1

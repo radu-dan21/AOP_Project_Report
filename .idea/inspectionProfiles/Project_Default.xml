@@ -1,0 +1,15 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="entities.models.filter.video_coding" />
+          <option value="video_coding.entities.models.video_file.EncodedVideoFile.*" />
+          <option value="video_coding.entities.models.filter.FilterResults.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
