@@ -1,3 +1,4 @@
+from src.ui import MainMenu
 from src.utils import weave
 
 
@@ -7,5 +8,6 @@ if __name__ == "__main__":
     # create_tables()
 
     weave()
-
-    print("Hello world!")
+    print("Welcome!")
+    MainMenu.run()
+    print("\nBye!")
