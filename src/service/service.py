@@ -38,7 +38,7 @@ class Service:
     @staticmethod
     def __delete_entity(model: type[Model], entity_id: int) -> None:
         if not model.delete_by_id(entity_id):
-            raise ValidationError(f"{model.__name} does not exist!")
+            raise ValidationError(f"{model.__name__} does not exist!")
 
     @classmethod
     def add_user(cls, name: str) -> None:
