@@ -17,7 +17,7 @@ class WeatherStation(BaseModel, Publisher):
         ],
     )
 
-    users = ManyToManyField(User, backref="stations")
+    users = ManyToManyField(User, backref="stations", on_delete="CASCADE")
 
     def clean(self) -> None:
         super().clean()
@@ -33,7 +33,7 @@ class WeatherStation(BaseModel, Publisher):
         except Exception:
             raise ValidationError(
                 f"Temperature should be a float value "
-                f"between {self.MIN_TEMP} and {self.MAX_TEMP}"
+                f"between {self.MIN_TEMP} and {self.MAX_TEMP}!"
             )
 
     def get_subscribers(self) -> list[Subscriber]:
@@ -53,7 +53,7 @@ class WeatherStation(BaseModel, Publisher):
     def notify_subscribers(self, message: str | None = None) -> None:
         print(
             f"{self} - "
-            f"Notifying {self.get_subscribers_count()} subscribers - "
+            f"Notifying {self.get_subscribers_count()} subscriber(s) - "
             f"{message}"
         )
         super().notify_subscribers(message)
