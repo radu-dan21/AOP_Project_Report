@@ -23,4 +23,4 @@ class Publisher:
     def notify_subscribers(self, message: str | None = None) -> None:
         context: Context = self.get_context(message)
         for s in self.get_subscribers():
-            s.update(context)
+            s.notify(context)
